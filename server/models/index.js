@@ -30,9 +30,7 @@ if(process.env.NODE_ENV === 'test' ){
 }else{
     const hostArray = process.env.db_host.split(':');
     const sequelize = new Sequelize(process.env.db_name,process.env.db_username,process.env.db_password,{
-    //const sequelize = new Sequelize("webapp_database","root","Dharmik@123",{
     host:hostArray[0],
-    //host:'localhost',  
     dialect:'mysql',
     dialectOptions: {
         ssl: 'Amazon RDS',
